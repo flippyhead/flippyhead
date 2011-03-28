@@ -1,9 +1,9 @@
 # Command Enhancements
 
 # Utility
-alias reload='source ~/bin/dotfiles/bash/aliases'
-alias ea='mate -w ~/bin/dotfiles/bash/aliases && reload' # Edit aliases
-alias ee="mate ~/bin/dotfiles/bash/env"
+alias reload='source ~/dotfiles/bash/aliases'
+alias ea='mate -w ~/dotfiles/bash/aliases && reload' # Edit aliases
+alias ee="mate ~/dotfiles/bash/env"
 
 # Quicker cd
 alias cg='cd /Library/Ruby/Gems/1.8/gems/'
@@ -123,7 +123,7 @@ function ct() {
 # TextMate
 alias et="mate"
 alias ett="mate ."
-alias etr="mate app config lib db schema public spec test vendor/gems vendor/plugins Rakefile Capfile Vladfile Todofile README stories merb slices tasks features &"
+alias etr="mate app config lib db schema public doc spec test vendor/gems vendor/plugins Rakefile Capfile Gemfile Guardfile README stories merb slices tasks features &"
 
 # Ruby
 alias r="rake"
@@ -231,3 +231,17 @@ function __rm_single_file(){
     fi
 }
 
+# Bash Directory Bookmarks
+alias m1='alias g1="cd `pwd`"'
+alias m2='alias g2="cd `pwd`"'
+alias m3='alias g3="cd `pwd`"'
+alias m4='alias g4="cd `pwd`"'
+alias m5='alias g5="cd `pwd`"'
+alias m6='alias g6="cd `pwd`"'
+alias m7='alias g7="cd `pwd`"'
+alias m8='alias g8="cd `pwd`"'
+alias m9='alias g9="cd `pwd`"'
+alias mdump='alias|grep -e "alias g[0-9]"|grep -v "alias m" > ~/.bookmarks'
+alias lma='alias | grep -e "alias g[0-9]"|grep -v "alias m"|sed "s/alias //"'
+touch ~/.bookmarks
+source ~/.bookmarks

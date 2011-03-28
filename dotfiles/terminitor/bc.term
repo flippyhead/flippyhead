@@ -1,0 +1,15 @@
+setup 'echo "setup"'
+
+tab do
+  run "cd ~/Development/browsercasting"
+  run "coffee server.coffee"
+end
+
+tab do
+  run "cd ~/Development/browsercasting"
+  run "mate ."
+end
+
+tab do
+  run "mongo"
+end

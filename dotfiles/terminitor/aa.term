@@ -1,0 +1,15 @@
+
+tab do
+  run "cd /Users/peterbrown/Development/AwarenessApp"
+  run "coffee application.coffee"
+end
+
+tab do
+  run "cd /Users/peterbrown/Development/AwarenessApp"
+  run "mate ."
+  run "coffee -wc public/javascripts/"
+end
+
+tab do
+  run "mongo"
+end

@@ -1,0 +1,22 @@
+tab :name => 'TESTING' do
+  run "cd ~/Development/pathable2"
+  run "bundle exec guard start"
+end
+
+tab :name => 'SERVER' do
+  run "cd ~/Development/pathable2"
+  run "etr"  
+  run "passenger start"
+end
+
+tab :name => 'RESQUE' do
+  run "cd ~/Development/pathable2"
+  run "VVERBOSE=1 QUEUE=* rake resque:work"
+end
+
+tab :name => 'CONSOLE' do
+  run "cd ~/Development/pathable2"
+end
+
+tab do
+end

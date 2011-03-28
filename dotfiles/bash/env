@@ -1,3 +1,8 @@
-
+if [[ -s /Users/peterbrown/.rvm/scripts/rvm ]] ; then source /Users/peterbrown/.rvm/scripts/rvm ; fi
 
 # Set PATH, CDPATH, EDITOR, etc.
+PATH=$PATH:/usr/local/share/npm/bin
+NODE_PATH=/usr/local/lib/node
+EDITOR=/usr/local/bin/mate
+
+export NODE_PATH EDITOR PATH

@@ -1,4 +1,16 @@
-Host example
-  HostName example.com
-  User my_username
-
+Host job
+  HostName job.pathable.com
+  ForwardAgent yes
+  CheckHostIP no
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  User root
+  IdentityFile ~/.ssh/id_rsa
+  
+Host *.amazonaws.com my.pathable.com staging.pathable.com job.pathable.com
+ ForwardAgent yes
+ CheckHostIP no
+ StrictHostKeyChecking no
+ UserKnownHostsFile=/dev/null
+ User root
+ IdentityFile ~/.ssh/id_rsa
