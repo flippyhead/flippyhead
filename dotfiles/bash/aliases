@@ -5,12 +5,6 @@ alias reload='source ~/dotfiles/bash/aliases'
 alias ea='mate -w ~/dotfiles/bash/aliases && reload' # Edit aliases
 alias ee="mate ~/dotfiles/bash/env"
 
-# Quicker cd
-alias cg='cd /Library/Ruby/Gems/1.8/gems/'
-function cr() {
- cd ~/repos/$*
-}
-
 # Common -- Some are from Damian Conway
 alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
@@ -23,13 +17,13 @@ function cdc() {
 alias cls='clear; ls'
 alias h='history'
 alias l.='ls -d .[^.]*'
-alias l='ls -lhGt'  # -l long listing, most recent first
-                    # -G color
+# alias l='ls -lhGt'  # -l long listing, most recent first
+#                     # -G color
 alias lh="ls -lh"
 alias ll='ls -lhG'  # -l long listing, human readable, no group info
 alias lt='ls -lt' # sort with recently modified first
 alias md='mkdir -p'
-alias s='cd ..'   # up one dir
+# alias s='cd ..'   # up one dir
 
 function take() { 
     mkdir -p "$1"
@@ -60,12 +54,6 @@ function pless() {
 alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 
-# Mercurial hg
-function new-hg() {
-    ssh hg@example.com "hg init $1"
-    hg clone ssh://hg@example.com/$1
-}
-
 # Git
 alias ungit="find . -name '.git' -exec rm -rf {} \;"
 alias gb='git branch'
@@ -84,7 +72,7 @@ alias gnp="git-notpushed"
 alias gp='git push'
 alias gst='git status'
 alias gt='git status'
-alias g='git status'
+alias gs='git status'
 alias eg='mate .git/config'
 # Git clone from GitHub
 function gch() {
@@ -112,18 +100,18 @@ function new-git() {
 
 # Text editing
 # Emacs
-alias em="open -a Emacs"
-alias emm="open -a Emacs ."
-# Regenerate TAGS file from file arguments
-function ct() {
-  rm -f TAGS
-  etags --append --output=TAGS $*
-}
+# alias em="open -a Emacs"
+# alias emm="open -a Emacs ."
+# # Regenerate TAGS file from file arguments
+# function ct() {
+#   rm -f TAGS
+#   etags --append --output=TAGS $*
+# }
 
 # TextMate
 alias et="mate"
 alias ett="mate ."
-alias etr="mate app config lib db schema public doc spec test vendor/gems vendor/plugins Rakefile Capfile Gemfile Guardfile README stories merb slices tasks features &"
+alias etr="mate app config lib db public spec vendor/plugins Rakefile Capfile Gemfile Gemfile.lock Guardfile README INSTALL tasks &"
 
 # Ruby
 alias r="rake"
@@ -133,15 +121,10 @@ function markdown() {
 }
 
 # Rails
-alias mr='mongrel_rails start'
-alias ms='mongrel_rails stop'
 alias rp='touch tmp/restart.txt'
-alias sc='./script/console'
-alias sg='./script/generate'
-alias sp='./script/plugin'
-alias ss='./script/server'
 alias tl='tail -f log/*.log'
-alias ts='thin start'
+alias rc='rails c'
+alias rs='rails s'
 
 # TDD / BDD
 
@@ -166,18 +149,6 @@ function wav2mp3() {
   lame -h -V 0 $1.wav $1.mp3 
 }
 
-
-# XCode
-# Analyze release build
-alias sx="xcodebuild clean && ~/src/checker-0.146/scan-build -k -V xcodebuild"
-# Analyze test build
-alias sxt="xcodebuild -target Test clean && ~/src/checker-0.146/scan-build -k -V xcodebuild -target Test"
-# Call with -target Foo
-function sxx() { 
-  xcodebuild $* clean && ~/src/checker-0.146/scan-build -k -V xcodebuild $* 
-}
-
-alias ox="open *.xcodeproj"
 
 # Nginx
 function nginx_stop() {
@@ -231,17 +202,5 @@ function __rm_single_file(){
     fi
 }
 
-# Bash Directory Bookmarks
-alias m1='alias g1="cd `pwd`"'
-alias m2='alias g2="cd `pwd`"'
-alias m3='alias g3="cd `pwd`"'
-alias m4='alias g4="cd `pwd`"'
-alias m5='alias g5="cd `pwd`"'
-alias m6='alias g6="cd `pwd`"'
-alias m7='alias g7="cd `pwd`"'
-alias m8='alias g8="cd `pwd`"'
-alias m9='alias g9="cd `pwd`"'
-alias mdump='alias|grep -e "alias g[0-9]"|grep -v "alias m" > ~/.bookmarks'
-alias lma='alias | grep -e "alias g[0-9]"|grep -v "alias m"|sed "s/alias //"'
-touch ~/.bookmarks
-source ~/.bookmarks
+# Bash Directory Bookmarks: https://github.com/huyng/bashmarks
+. ~/dotfiles/bash/lib/bashmarks/bashmarks.sh
