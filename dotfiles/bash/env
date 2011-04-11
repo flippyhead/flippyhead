@@ -1,4 +1,12 @@
-if [[ -s /Users/peterbrown/.rvm/scripts/rvm ]] ; then source /Users/peterbrown/.rvm/scripts/rvm ; fi
+if [[ -s /Users/peterbrown/.rvm/scripts/rvm ]] ; then 
+  . ~/.rvm/scripts/rvm
+fi
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+. ~/dotfiles/bash/lib/git-flow-completions/git-flow-completions.sh
 
 # Set PATH, CDPATH, EDITOR, etc.
 PATH=$PATH:/usr/local/share/npm/bin

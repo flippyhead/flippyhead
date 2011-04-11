@@ -50,6 +50,8 @@ function pless() {
     pygmentize $1 | less -r 
 }
 
+alias tn='tail -f -n 1000'
+
 # Processes
 alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
@@ -111,7 +113,7 @@ function new-git() {
 # TextMate
 alias et="mate"
 alias ett="mate ."
-alias etr="mate app config lib db public spec vendor/plugins Rakefile Capfile Gemfile Gemfile.lock Guardfile README INSTALL tasks &"
+alias etr="mate app config lib db spec script vendor/plugins Rakefile Capfile Gemfile Gemfile.lock Guardfile README INSTALL tasks 404.html 422.html 500.html flashes fonts host images javascripts/vendor robots.txt stylesheets &"
 
 # Ruby
 alias r="rake"
@@ -125,12 +127,14 @@ alias rp='touch tmp/restart.txt'
 alias tl='tail -f log/*.log'
 alias rc='rails c'
 alias rs='rails s'
+alias bs='bundle show'
+
+function ebs() { 
+	mate `bs $1`
+}
 
 # TDD / BDD
-
-alias aa='autotest'
-alias aaf='autotest -f' # Don't run all at start
-alias aas="./script/autospec"
+alias as='guard start'
 
 # Setup a tunnel
 function haproxyssh() { 
