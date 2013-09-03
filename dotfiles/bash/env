@@ -1,16 +1,14 @@
-if [[ -s /Users/peterbrown/.rvm/scripts/rvm ]] ; then 
-  . ~/.rvm/scripts/rvm
-fi
-
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-. ~/dotfiles/bash/lib/git-flow-completions/git-flow-completions.sh
-
-# Set PATH, CDPATH, EDITOR, etc.
-PATH=$PATH:/usr/local/share/npm/bin
+PATH=node_modules/.bin:/usr/local/bin:/usr/bin:$PATH:/usr/local/share/npm/bin
 NODE_PATH=/usr/local/lib/node
 EDITOR=/usr/local/bin/mate
+RUBY_GC_MALLOC_LIMIT=1000000000
+RUBY_FREE_MIN=500000
+RUBY_HEAP_MIN_SLOTS=40000
 
-export NODE_PATH EDITOR PATH
+export NODE_PATH EDITOR PATH RUBY_GC_MALLOC_LIMIT RUBY_FREE_MIN RUBY_HEAP_MIN_SLOTS
+
+eval "$(rbenv init -)"

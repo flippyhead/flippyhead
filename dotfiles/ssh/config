@@ -1,3 +1,12 @@
+Host mytwee
+  HostName mytwee.com
+  ForwardAgent yes
+  CheckHostIP no
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  User root
+  IdentityFile ~/.ssh/id_rsa
+
 Host job
   HostName job.pathable.com
   ForwardAgent yes
