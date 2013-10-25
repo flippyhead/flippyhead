@@ -2,13 +2,15 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-PATH=node_modules/.bin:/usr/local/bin:/usr/bin:$PATH:/usr/local/share/npm/bin
+PATH=node_modules/.bin:/usr/local/bin:/usr/bin:$PATH:.bundle/bin
 NODE_PATH=/usr/local/lib/node
 EDITOR=/usr/local/bin/mate
 RUBY_GC_MALLOC_LIMIT=1000000000
 RUBY_FREE_MIN=500000
 RUBY_HEAP_MIN_SLOTS=40000
+BUNDLE_PATH=.bundle
+BUNDLE_BIN=.bundle/bin
 
-export NODE_PATH EDITOR PATH RUBY_GC_MALLOC_LIMIT RUBY_FREE_MIN RUBY_HEAP_MIN_SLOTS
+export NODE_PATH EDITOR PATH RUBY_GC_MALLOC_LIMIT RUBY_FREE_MIN RUBY_HEAP_MIN_SLOTS BUNDLE_BIN BUNDLE_PATH
 
 eval "$(rbenv init -)"
