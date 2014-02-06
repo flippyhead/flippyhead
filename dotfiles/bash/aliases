@@ -52,7 +52,7 @@ alias ssh-db-s='g p2; ey ssh -e staging_west --db-master'
 alias ssh-app-s='g p2; ey ssh -e staging_west'
 
 # pow
-alias pow='powder'
+alias powd='powder'
 
 # MYSQL
 alias my-dev='mysql -u root pathable2_development'

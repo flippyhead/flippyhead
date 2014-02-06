@@ -14,4 +14,3 @@ BUNDLE_BIN=.bundle/bin
 export NODE_PATH EDITOR PATH RUBY_GC_MALLOC_LIMIT RUBY_FREE_MIN RUBY_HEAP_MIN_SLOTS BUNDLE_BIN BUNDLE_PATH
 
 eval "$(rbenv init -)"
-source $(brew --prefix nvm)/nvm.sh

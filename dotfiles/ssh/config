@@ -1,25 +1,23 @@
-Host mytwee
-  HostName mytwee.com
+Host *.amazonaws.com
   ForwardAgent yes
   CheckHostIP no
   StrictHostKeyChecking no
-  UserKnownHostsFile=/dev/null
-  User root
-  IdentityFile ~/.ssh/id_rsa
+  UserKnownHostsFile /dev/null
+  User ubuntu
+  IdentityFile ~/.ssh/ec2-flippyhead.pem
 
-Host job
-  HostName job.pathable.com
+Host fetching.io
   ForwardAgent yes
   CheckHostIP no
   StrictHostKeyChecking no
-  UserKnownHostsFile=/dev/null
+  UserKnownHostsFile /dev/null
+  User ubuntu
+  IdentityFile ~/.ssh/ec2-flippyhead.pem
+
+Host *.amazonaws.com
+  ForwardAgent yes
+  CheckHostIP no
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
   User root
   IdentityFile ~/.ssh/id_rsa
-  
-Host *.amazonaws.com my.pathable.com staging.pathable.com job.pathable.com
- ForwardAgent yes
- CheckHostIP no
- StrictHostKeyChecking no
- UserKnownHostsFile=/dev/null
- User root
- IdentityFile ~/.ssh/id_rsa
