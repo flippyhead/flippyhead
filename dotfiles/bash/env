@@ -6,7 +6,7 @@ if [ $(ulimit -n) -le 10000 ]; then
   ulimit -n 10000
 fi
 
-PATH=node_modules/.bin:.bundle/bin:/usr/local/bin:/usr/bin:$HOME/Library/Trigger\ Toolkit/:$PATH
+PATH=node_modules/.bin:.bundle/bin:/usr/local/bin:/usr/bin:/Users/peter/node_modules/.bin:$HOME/Library/Trigger\ Toolkit/:$PATH
 NODE_PATH=/usr/local/lib/node
 EDITOR=/usr/local/bin/mate
 RUBY_GC_MALLOC_LIMIT=1000000000
