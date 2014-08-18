@@ -60,6 +60,8 @@ alias my-dev='mysql -u root pathable2_development'
 # Finder
 alias o='open . &'
 alias ff='open -a Firefox'
+alias f-show-hidden='defaults write com.apple.finder AppleShowAllFiles -bool YES; killall Finder'
+alias f-hide-hidden='defaults write com.apple.finder AppleShowAllFiles -bool NO; killall Finder'
 
 # General code
 
