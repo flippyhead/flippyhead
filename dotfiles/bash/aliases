@@ -42,21 +42,6 @@ function zipr() {
   zip -r $1.zip $1
 }
 
-# EY
-alias ssh-util-p='g p2; ey ssh -e production_west --utilities=elasticsearch'
-alias ssh-db-p='g p2; ey ssh -e production_west --db-master'
-alias ssh-app-p='g p2; ey ssh -e production_west'
-
-alias ssh-util-s='g p2; ey ssh -e staging_west --utilities=redis_resque'
-alias ssh-db-s='g p2; ey ssh -e staging_west --db-master'
-alias ssh-app-s='g p2; ey ssh -e staging_west'
-
-# pow
-alias powd='powder'
-
-# MYSQL
-alias my-dev='mysql -u root pathable2_development'
-
 # Finder
 alias o='open . &'
 alias ff='open -a Firefox'
@@ -77,8 +62,7 @@ alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 
 # Git
-alias gf="git flow"
-alias gff="git flow feature"
+alias git="hub"
 alias ungit="find . -name '.git' -exec rm -rf {} \;"
 alias gb='git branch'
 alias gba='git branch -a'

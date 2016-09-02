@@ -8,13 +8,17 @@ fi
 
 PATH=node_modules/.bin:.bundle/bin:/usr/local/bin:/usr/bin:/Users/peter/node_modules/.bin:$HOME/Library/Trigger\ Toolkit/:$PATH
 NODE_PATH=/usr/local/lib/node
-EDITOR=/usr/local/bin/mate
+
 RUBY_GC_MALLOC_LIMIT=1000000000
 RUBY_FREE_MIN=500000
 RUBY_HEAP_MIN_SLOTS=40000
 BUNDLE_PATH=.bundle
 BUNDLE_BIN=.bundle/bin
+HOMEBREW_GITHUB_API_TOKEN=eb6900b54685e4bf8edfdf209caf7e3417974558
+PACKAGE_DIRS=/Users/peter/Development
+EDITOR=nano
 
-export NODE_PATH EDITOR PATH RUBY_GC_MALLOC_LIMIT RUBY_FREE_MIN RUBY_HEAP_MIN_SLOTS BUNDLE_BIN BUNDLE_PATH
+export NODE_PATH EDITOR PATH RUBY_GC_MALLOC_LIMIT RUBY_FREE_MIN RUBY_HEAP_MIN_SLOTS BUNDLE_BIN BUNDLE_PATH HOMEBREW_GITHUB_API_TOKEN PACKAGE_DIRS
 
+eval $(docker-machine env)
 eval "$(rbenv init -)"
