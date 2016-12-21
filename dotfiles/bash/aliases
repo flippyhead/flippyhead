@@ -2,8 +2,8 @@
 
 # Utility
 alias reload='source ~/dotfiles/bash/aliases'
-alias ea='subl -w ~/dotfiles/bash/aliases && reload' # Edit aliases
-alias ee="subl ~/dotfiles"
+alias ea='$EDITOR -w ~/dotfiles/bash/aliases && reload' # Edit aliases
+alias ee='$EDITOR ~/dotfiles/bash/env && reload'
 
 # System
 alias restart_audio="sudo kill -9 `ps ax|grep 'coreaudio[a-z]' |awk '{print $1}'`"
@@ -81,7 +81,7 @@ alias gp='git push'
 alias gst='git status'
 alias gt='git status'
 alias gs='git status'
-alias eg='subl .git/config'
+alias eg='$EDITOR .git/config'
 # Git clone from GitHub
 function gch() {
   git clone git://github.com/$USER/$1.git
@@ -107,17 +107,7 @@ function new-git() {
 }
 
 # Text editing
-# Emacs
-# alias em="open -a Emacs"
-# alias emm="open -a Emacs ."
-# # Regenerate TAGS file from file arguments
-# function ct() {
-#   rm -f TAGS
-#   etags --append --output=TAGS $*
-# }
-
-# Editor
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias edit=$EDITOR
 
 # Ruby
 alias r="rake"
@@ -133,7 +123,7 @@ alias be='bundle exec'
 alias ber='bundle exec rake'
 
 function ebs() {
-	subl `bs $1`
+	$EDITOR `bs $1`
 }
 
 # TDD / BDD
@@ -208,6 +198,3 @@ function __rm_single_file(){
         echo "No such file or directory: $file"
     fi
 }
-
-# Bash Directory Bookmarks: https://github.com/huyng/bashmarks
-. ~/dotfiles/bash/lib/bashmarks/bashmarks.sh

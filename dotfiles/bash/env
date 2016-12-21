@@ -2,10 +2,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-if [ $(ulimit -n) -le 10000 ]; then
-  ulimit -n 10000
-fi
-
 PATH=node_modules/.bin:.bundle/bin:/usr/local/bin:/usr/bin:/Users/peter/node_modules/.bin:$HOME/Library/Trigger\ Toolkit/:$PATH
 NODE_PATH=/usr/local/lib/node
 
@@ -15,10 +11,10 @@ RUBY_HEAP_MIN_SLOTS=40000
 BUNDLE_PATH=.bundle
 BUNDLE_BIN=.bundle/bin
 HOMEBREW_GITHUB_API_TOKEN=eb6900b54685e4bf8edfdf209caf7e3417974558
-PACKAGE_DIRS=/Users/peter/Development
-EDITOR=nano
+METEOR_PACKAGE_DIRS=$HOME/Development
+PACKAGE_DIRS=$HOME/Development
+EDITOR=atom
 
-export NODE_PATH EDITOR PATH RUBY_GC_MALLOC_LIMIT RUBY_FREE_MIN RUBY_HEAP_MIN_SLOTS BUNDLE_BIN BUNDLE_PATH HOMEBREW_GITHUB_API_TOKEN PACKAGE_DIRS
+export NODE_PATH EDITOR PATH BUNDLE_BIN BUNDLE_PATH HOMEBREW_GITHUB_API_TOKEN METEOR_PACKAGE_DIRS PACKAGE_DIRS
 
-eval $(docker-machine env)
 eval "$(rbenv init -)"
