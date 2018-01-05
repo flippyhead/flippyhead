@@ -2,8 +2,9 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-PATH=node_modules/.bin:.bundle/bin:/usr/local/bin:/usr/bin:/Users/peter/node_modules/.bin:$HOME/Library/Trigger\ Toolkit/:$PATH
-NODE_PATH=/usr/local/lib/node
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+PATH=node_modules/.bin:.bundle/bin:/usr/local/bin:/usr/bin:$HOME/Library/Trigger\ Toolkit/$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+NODE_PATH=/usr/local/bin/node
 
 RUBY_GC_MALLOC_LIMIT=1000000000
 RUBY_FREE_MIN=500000
@@ -11,10 +12,8 @@ RUBY_HEAP_MIN_SLOTS=40000
 BUNDLE_PATH=.bundle
 BUNDLE_BIN=.bundle/bin
 HOMEBREW_GITHUB_API_TOKEN=fa37553473babfe6156f32df5dfc190a9ddd465b
-METEOR_PACKAGE_DIRS=$HOME/Development
-PACKAGE_DIRS=$HOME/Development
 EDITOR=atom
 
-export NODE_PATH EDITOR PATH BUNDLE_BIN BUNDLE_PATH HOMEBREW_GITHUB_API_TOKEN METEOR_PACKAGE_DIRS PACKAGE_DIRS
+export NODE_PATH EDITOR PATH BUNDLE_BIN BUNDLE_PATH HOMEBREW_GITHUB_API_TOKEN
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
