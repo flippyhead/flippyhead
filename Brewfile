@@ -19,3 +19,5 @@ cask 'spotify'
 cask 'google-chrome'
 mas "Wunderlist", id: 410628904
 mas "OmniFocus 2", id: 867299399
+mas "Pixelmator", id: 407963104
+mas "Kindle", id: 405399194

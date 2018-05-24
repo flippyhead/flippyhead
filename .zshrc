@@ -31,4 +31,4 @@ source $DOTFILES/.env
 source $ZSH/oh-my-zsh.sh
 
 # Include Pathable
-source $HOME/Documents/GitHub/pathable-next/config/zsh/pathable.zsh
+source $HOME/Development/pathable-next/config/zsh/pathable.zsh
