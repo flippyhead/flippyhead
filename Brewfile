@@ -17,6 +17,7 @@ cask 'github'
 cask 'vlc'
 cask 'spotify'
 cask 'google-chrome'
+cask 'arq'
 mas "Wunderlist", id: 410628904
 mas "OmniFocus 2", id: 867299399
 mas "Pixelmator", id: 407963104
