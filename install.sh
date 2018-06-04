@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo "Setting up your Mac..."
+DOTFILES=`dirname $0`
 
 # Ask for the administrator password upfront
 sudo -v

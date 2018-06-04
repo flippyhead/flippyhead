@@ -18,7 +18,11 @@ cask 'vlc'
 cask 'spotify'
 cask 'google-chrome'
 cask 'arq'
+cask 'studio-3t'
+cask 'zoomus'
 mas "Wunderlist", id: 410628904
 mas "OmniFocus 2", id: 867299399
 mas "Pixelmator", id: 407963104
 mas "Kindle", id: 405399194
+mas "Slack", id: 803453959
+mas "Magnet", id: 441258766

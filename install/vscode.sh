@@ -19,3 +19,4 @@ code --install-extension robertohuertasm.vscode-icons
 code --install-extension wix.vscode-import-cost
 code --install-extension ban.spellright
 code --install-extension vector-of-bool.gitflow
+code --install-extension felipe.nasc-touchbar
