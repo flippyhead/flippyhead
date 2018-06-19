@@ -21,3 +21,4 @@ code --install-extension ban.spellright
 code --install-extension vector-of-bool.gitflow
 code --install-extension felipe.nasc-touchbar
 code --install-extension aaron-bond.better-comments
+code --install-extension deerawan.vscode-dash
