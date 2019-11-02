@@ -32,3 +32,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Include Pathable
 source $HOME/Development/pathable-next/config/zsh/pathable.zsh
+[[ -s ~/.envrc ]] && source ~/.envrc

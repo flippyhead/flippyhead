@@ -1,11 +1,12 @@
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
+tap 'mongodb/brew'
 brew 'autoconf'
 brew 'dnsmasq', restart_service: true
 brew 'git'
 brew 'openssl'
-brew 'mongodb', restart_service: true
+brew 'mongodb-community', restart_service: true
 brew 'n'
 brew 'node'
 brew 'mas'
@@ -21,9 +22,9 @@ cask 'arq'
 cask 'studio-3t'
 cask 'zoomus'
 cask 'dropbox'
-cash 'dash'
+cask 'dash'
 mas "Wunderlist", id: 410628904
-mas "OmniFocus 2", id: 867299399
+mas "OmniFocus 3", id: 1346203938
 mas "Pixelmator", id: 407963104
 mas "Kindle", id: 405399194
 mas "Slack", id: 803453959
