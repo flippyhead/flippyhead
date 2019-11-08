@@ -32,3 +32,4 @@ mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "XCode", id: 497799835
+mas "Unarchiver", id: 425424353
