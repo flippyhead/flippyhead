@@ -22,7 +22,7 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git meteor yarn git-flow node npm github)
+plugins=(git yarn git-flow node npm github)
 
 # Load ENV vars
 source $DOTFILES/.env
@@ -30,6 +30,6 @@ source $DOTFILES/.env
 # Activate Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
 
-# Include Pathable
-source $HOME/Development/pathable-next/config/zsh/pathable.zsh
-[[ -s ~/.envrc ]] && source ~/.envrc
+
+# Created by `pipx` on 2024-07-25 11:51:01
+export PATH="$PATH:/Users/peterbrown/.local/bin"
