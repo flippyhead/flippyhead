@@ -22,7 +22,7 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git yarn git-flow node npm github)
+plugins=(git node npm github)
 
 # Load ENV vars
 source $DOTFILES/.env
