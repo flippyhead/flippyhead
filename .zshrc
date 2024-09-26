@@ -33,3 +33,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Created by `pipx` on 2024-07-25 11:51:01
 export PATH="$PATH:/Users/peterbrown/.local/bin"
+if [ -f "/Users/peterbrown/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/peterbrown/.config/fabric/fabric-bootstrap.inc"; fi
